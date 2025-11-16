@@ -24,6 +24,7 @@ export function Lefthalf() {
         {title: "It Is Magic", year: "2019", link: "https://vimeo.com/825208471"},
         {title: "Jim Lehrer and the Theater and Its Double and Jim Lehrer’s Double", year: "2017", link: "https://vimeo.com/431637248"},
         {title: "Song About Himself", year: "2015", link: "https://vimeo.com/429044271"},
+        {title: "The Hunchback Variations (Opera)", year: "2012", link: "https://vimeo.com/441063401"},
         {title: "There is a Happiness That Morning Is", year: "2011", link: "https://vimeo.com/429048215"},
         {title: "An Apology for the Course and Outcome of Certain Events Delivered by Doctor John Faustus on This His Final Evening", year: "2009", link: "https://vimeo.com/429122963"},
         {title: "The Strangerer", year: "2007", link: "https://vimeo.com/429115237"},
@@ -40,7 +41,7 @@ export function Lefthalf() {
                     <span className="separator">/</span>
                     <a>CV</a>
                     <span className="separator">/</span>
-                    <a style={{textDecoration: (section == "books" ? "underline" : "auto")}} onClick={() => setsection("books")}>Books</a>
+                    <a style={{textDecoration: (section == "books" ? "underline" : "auto")}} onClick={() => setsection("books")}>Books/Performance Rights</a>
                     <span className="separator">/</span>
                     <a style={{textDecoration: (section == "videos" ? "underline" : "auto")}} onClick={() => setsection("videos")}>Video</a>
                     <span className="separator">/</span>
