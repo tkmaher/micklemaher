@@ -38,13 +38,13 @@ export function Lefthalf() {
                 <h1>Mickle Maher</h1>
                 <div className="flex-row">
                     <a style={{textDecoration: (section == "about" ? "underline" : "auto")}} onClick={() => setsection("about")}>About</a>
-                    <span className="separator">/</span>
+                    <span className="separator">-</span>
                     <a>CV</a>
-                    <span className="separator">/</span>
+                    <span className="separator">-</span>
                     <a style={{textDecoration: (section == "books" ? "underline" : "auto")}} onClick={() => setsection("books")}>Books/Performance Rights</a>
-                    <span className="separator">/</span>
+                    <span className="separator">-</span>
                     <a style={{textDecoration: (section == "videos" ? "underline" : "auto")}} onClick={() => setsection("videos")}>Video</a>
-                    <span className="separator">/</span>
+                    <span className="separator">-</span>
                     <a style={{textDecoration: (section == "contact" ? "underline" : "auto")}} onClick={() => setsection("contact")}>Contact</a>
 
                 </div>
