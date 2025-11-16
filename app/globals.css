@@ -29,16 +29,19 @@ body {
 
 .flex-row {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 @media only screen and (hover: none) and (pointer: coarse){
   .container {
     flex-direction: column; 
     text-align: justify;
+    height: auto; 
   }
   
-  .container {
-    height: auto; 
+  .flex-row {
+    margin-bottom: 20px;
+    text-align: left;
   }
 }
 
