@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Cambria, Georgia, serif;
+  padding: 0;
+}
+
+.container {
+  display: flex; 
+  height: 100vh; 
+  width: 100%;
+  flex-direction: row;
+  float: right;
+}
+
+.flex-row {
+  margin-bottom: 20px;
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+  .container {
+    flex-direction: column; 
+    text-align: justify;
+  }
+  
+  .container {
+    height: auto; 
+  }
+}
+
+.left-half, .right-half {
+  flex: 1; 
+  overflow: scroll; 
+  padding: 20px; 
+}
+
+.content-box {
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+a, button {
+  text-decoration: none;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+input, select {
+  border: 0.5px solid var(--foreground);
+  padding: 2px;
+  margin-bottom: 2px;
+  height: auto;
+  width: 70%;
+  
+}
+
+textarea {
+  border: 0.5px solid var(--foreground);
+  width: 70%;
+  height: 150px;
+}
+
+.separator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.drawing {
+  margin-bottom: 20px;
+  max-width: 10em;
+}
+
+.vimeo-div {
+  padding: 50% 0 0 0;
+  margin-bottom: 20px;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.div-link:hover {
+  text-decoration: underline;
+}
+
