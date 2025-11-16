@@ -39,7 +39,7 @@ export function Lefthalf() {
                 <div className="flex-row">
                     <a style={{textDecoration: (section == "about" ? "underline" : "auto")}} onClick={() => setsection("about")}>About</a>
                     <span className="separator">-</span>
-                    <a>CV</a>
+                    <a href="micklemaher_cv.pdf" target="_blank">CV</a>
                     <span className="separator">-</span>
                     <a style={{textDecoration: (section == "books" ? "underline" : "auto")}} onClick={() => setsection("books")}>Books/Performance Rights</a>
                     <span className="separator">-</span>
@@ -54,10 +54,10 @@ export function Lefthalf() {
                 </div>}
  
                 {section == "books" && books.map((book, index) => {
-                    return <div className="div-link" key={index}><Link href={book[1]}>{book[0]}</Link><br/></div>
+                    return <div className="div-link" key={index}><Link target="_blank" href={book[1]}>{book[0]}</Link><br/></div>
                 })}
                 {section == "videos" && plays.map((play, index) => {
-                    return <div className="div-link" key={index}><Link href={play.link}>{play.title} ({play.year})</Link><br/></div>
+                    return <div className="div-link" key={index}><Link target="_blank" href={play.link}>{play.title} ({play.year})</Link><br/></div>
                 })}
                 
             </div>
