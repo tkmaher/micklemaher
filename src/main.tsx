@@ -32,8 +32,8 @@ export function Lefthalf() {
     ];
 
     const radioplays: {title: string, year: string, link: string}[] = [
-        {title: "It Is Almost Always Upon Us", year: "2021", link: "https://drive.google.com/file/d/1NDsqEnqQYzp4zpGbWhvzPG0_Pm6bIS3l/view"},
-        {title: "The Cabinet", year: "2021", link: "https://www.dropbox.com/scl/fi/5qv0n97ryq1clcxmjpo2n/THE-CABINET-With-Frank-Intro-STEREO.mp3?rlkey=zwmmnfxc3rpb1akpujsxtag79&e=2&dl=0"},
+        {title: "It Is Almost Always Upon Us", year: "2021", link: "https://soundcloud.com/user-849975303/it-is-always-almost-upon-us"},
+        {title: "The Cabinet", year: "2021", link: "https://soundcloud.com/user-849975303/the-cabinet"},
     ];
 
     return (
