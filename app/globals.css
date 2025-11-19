@@ -45,10 +45,9 @@ body {
   }
 }
 
-.left-half, .right-half {
-  flex: 1; 
-  overflow: scroll; 
-  padding: 20px; 
+.left-half {
+  width: 50%;
+  padding: 20px;
 }
 
 .content-box {
@@ -64,8 +63,13 @@ a, button {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 button:hover {
   text-decoration: underline;
+  
 }
 
 input, select {

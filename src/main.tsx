@@ -4,17 +4,10 @@ import ContactForm from "./contact";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 
-export function Righthalf() {
-    return (
-        <div className="right-half">
-         
-        </div>
-    );
-}
+export function Body(props: {route?: string}) {
 
-export function Lefthalf() {
-
-    const [section, setsection] = useState("about");
+    const section = props.route ? props.route : "about";
+    console.log(props.route);
 
     const books: [string, string][] = [
         ["Six Plays", "https://sixplaysmicklemaher.com/"],
@@ -36,31 +29,35 @@ export function Lefthalf() {
         {title: "The Cabinet", year: "2021", link: "https://soundcloud.com/user-849975303/the-cabinet"},
     ];
 
+    const sections: [string, string][] = [
+        ["about", "About"], 
+        ["micklemaher_cv.pdf", "CV"], 
+        ["books", "Books"], 
+        ["videos", "Videos"], 
+        ["radioplays", "Radio Plays"], 
+        ["contact", "Contact"],
+        ["https://sixplaysmicklemaher.com/rights-inquiries/", "Performance Rights"]
+    ];
+
     return (
         <div className="left-half">
             <div className="content-box">
                 <img className="drawing" src="drawing.jpeg"/>
                 <h1>Mickle Maher</h1>
                 <div className="flex-row">
-                    <a style={{textDecoration: (section == "about" ? "underline" : "auto")}} onClick={() => setsection("about")}>About</a>
-                    <span className="separator">-</span>
-                    <a href="micklemaher_cv.pdf" target="_blank">CV</a>
-                    <span className="separator">-</span>
-                    <a style={{textDecoration: (section == "books" ? "underline" : "auto")}} onClick={() => setsection("books")}>Books</a>
-                    <span className="separator">-</span>
-                    <a style={{textDecoration: (section == "videos" ? "underline" : "auto")}} onClick={() => setsection("videos")}>Videos</a>
-                    <span className="separator">-</span>
-                    <a style={{textDecoration: (section == "radioplays" ? "underline" : "auto")}} onClick={() => setsection("radioplays")}>Radio Plays</a>
-                    <span className="separator">-</span>
-                    <a style={{textDecoration: (section == "contact" ? "underline" : "auto")}} onClick={() => setsection("contact")}>Contact</a>
-                    <span className="separator">-</span>
-                    <a href="https://sixplaysmicklemaher.com/rights-inquiries/" target="_blank">Performance Rights</a>
+                    {sections.map((sectionItem, index) => {
+                        return <span key={index}>
+                            <Link style={{textDecoration: sectionItem[0] === section ? "underline" : "auto"}} href={sectionItem[0]} >{sectionItem[1]}</Link>
+                            {index != sections.length - 1 && <span className="separator">/</span>}
+                        </span>
+                    })}
                 </div>
+
+
                 {section == "about" && <ReactMarkdown>Called one of the most original voices in American theater today, Chicago-based playwright Mickle Maher has been produced Off-Broadway (Barrow Street, 59 E 59), and by numerous theaters around the country and abroad. Plays include *It is Magic*; *There is a Happiness That Morning Is*; *Song About Himself*; *The Hunchback Variations; Spirits to Enforce;* book and lyrics for the musical *Small Ball*; *An Apology for the Course and Outcome of Certain Events Delivered by Doctor John Faustus on This His Final Evening; The Strangerer; Jim Lehrer and the Theater and Its Double and Jim Lehrer’s Double; Cyrano* (translator); *The Cabinet; The Pine*; *An Actor Prepares* (an adaptation of Stanislavsky's seminal book), and the award-winning adaptation of Jason Lutes’ graphic novel *Berlin.* He is a co-founder of Chicago’s Theater Oobleck, and has taught playwriting and related subjects at numerous institutions, including the University of Chicago, Northwestern, Columbia College, and the University of Houston. He is published by Agate Publishing. </ReactMarkdown>}
                 {section == "contact" && <div className="div-link">
                     <Link style={{color: "blue"}} href="mailto://mahermickle@gmail.com">mahermickle@gmail.com</Link>
                 </div>}
- 
                 {section == "books" && books.map((book, index) => {
                     return <div className="div-link" key={index}><Link target="_blank" href={book[1]}>{book[0]}</Link><br/></div>
                 })}
