@@ -25,11 +25,16 @@ body {
   width: 100%;
   flex-direction: row;
   float: right;
+  margin-bottom: 3em;
 }
 
 .flex-row {
   margin-bottom: 20px;
   text-align: left;
+}
+
+.left-half {
+  padding: 20px;
 }
 
 @media only screen and (hover: none) and (pointer: coarse){
@@ -43,12 +48,19 @@ body {
     margin-bottom: 20px;
     text-align: left;
   }
+
+  .left-half {
+    width: 100%;
+  }
 }
 
-.left-half {
-  width: 50%;
-  padding: 20px;
+@media only screen and (pointer: fine) {
+  .left-half {
+    width: 50%;
+  }
 }
+
+
 
 .content-box {
   width: 100%;

@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import ContactForm from "./contact";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
+import Image from "next/image";
+
+
 
 export function Body(props: {route?: string}) {
 
@@ -42,7 +43,7 @@ export function Body(props: {route?: string}) {
     return (
         <div className="left-half">
             <div className="content-box">
-                <img className="drawing" src="drawing.jpeg"/>
+                <Image className="drawing" src="drawing.jpeg" alt="drawing" width={100} height={400}/>
                 <h1>Mickle Maher</h1>
                 <div className="flex-row">
                     {sections.map((sectionItem, index) => {
@@ -56,7 +57,7 @@ export function Body(props: {route?: string}) {
 
                 {section == "about" && <ReactMarkdown>Called one of the most original voices in American theater today, Chicago-based playwright Mickle Maher has been produced Off-Broadway (Barrow Street, 59 E 59), and by numerous theaters around the country and abroad. Plays include *It is Magic*; *There is a Happiness That Morning Is*; *Song About Himself*; *The Hunchback Variations; Spirits to Enforce;* book and lyrics for the musical *Small Ball*; *An Apology for the Course and Outcome of Certain Events Delivered by Doctor John Faustus on This His Final Evening; The Strangerer; Jim Lehrer and the Theater and Its Double and Jim Lehrer’s Double; Cyrano* (translator); *The Cabinet; The Pine*; *An Actor Prepares* (an adaptation of Stanislavsky's seminal book), and the award-winning adaptation of Jason Lutes’ graphic novel *Berlin.* He is a co-founder of Chicago’s Theater Oobleck, and has taught playwriting and related subjects at numerous institutions, including the University of Chicago, Northwestern, Columbia College, and the University of Houston. He is published by Agate Publishing. </ReactMarkdown>}
                 {section == "contact" && <div className="div-link">
-                    <Link style={{color: "blue"}} href="mailto://mahermickle@gmail.com">mahermickle@gmail.com</Link>
+                    <Link style={{color: "blue"}} href="mailto:mahermickle@gmail.com">mahermickle@gmail.com</Link>
                 </div>}
                 {section == "books" && books.map((book, index) => {
                     return <div className="div-link" key={index}><Link target="_blank" href={book[1]}>{book[0]}</Link><br/></div>

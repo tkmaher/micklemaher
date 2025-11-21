@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://micklemaher.net
+
+# Sitemaps
+Sitemap: https://micklemaher.net/sitemap.xml
