@@ -1,5 +1,4 @@
 import { Body } from "@/src/main";
-export const runtime = 'edge';
 
 async function Home({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
